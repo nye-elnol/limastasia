@@ -318,6 +318,24 @@ document.addEventListener("click", (e) => {
 
 });
 
+// Let's set up the go to top button
+mybutton = document.getElementById("myBtn");
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 750 || document.documentElement.scrollTop > 750) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0; 
+  document.documentElement.scrollTop = 0; 
+}
+
 // Stop Propagation on menu
 tLinks.onclick = function (e) {
 
