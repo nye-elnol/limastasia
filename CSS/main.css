@@ -197,26 +197,6 @@ body { font-family: 'Open Sans', sans-serif; }
   transform: translateY(-50%);
 }
 
-#myBtn {
-  display: none; 
-  position: fixed; 
-  bottom: 22px; 
-  right: 33px; 
-  z-index: 99; 
-  border: none; 
-  outline: none; 
-  background-color: transparent; 
-  color: var(--main-color); 
-  cursor: pointer; 
-  padding: 15px; 
-  font-size: 35px; 
-}
-
-#myBtn:hover {
-  color: #7F07E1; 
-}
-
-
 .landing-page {
   min-height: 100vh;
   background-image: url('../images/ftthr.jpg');
