@@ -16,10 +16,8 @@ if (mainColors !== null) {
 
 }
 
-// Random Background option
 let bckOpt = true;
 
-// We gonna set a variable to control the background interval
 let bckIntv;
 
 let bckLclItm = localStorage.getItem("background_option");
@@ -63,7 +61,6 @@ document.querySelector(".toggle-settings .fa-cog").onclick =  function () {
 
 }
 
-// Switch Colors
 const colorsLi = document.querySelectorAll(".colors-list li");
 
 colorsLi.forEach(li => {
@@ -80,7 +77,6 @@ colorsLi.forEach(li => {
 
 });
 
-// Switch background options
 const rndBckOpt = document.querySelectorAll(".rnd-or-cstm-bck span");
 
 rndBckOpt.forEach(span => {
@@ -111,7 +107,6 @@ rndBckOpt.forEach(span => {
 
 });
 
-// Select Landing page element
 let landPage = document.querySelector(".landing-page");
 
 let imgArray = ["ftfour.jpg", "fttwel.jpg", "ftfvtn.jpg", "fttwfv.jpg"];
@@ -124,7 +119,6 @@ function rndImgs() {
 
       let randNum = Math.floor(Math.random() * imgArray.length);
 
-      // Change background image Url
       landPage.style.backgroundImage = 'url("images/' + imgArray[randNum] + '")';
 
       }, 3000 );
@@ -135,7 +129,6 @@ function rndImgs() {
 
 rndImgs();
 
-// Products Selector
 let ourGoods = document.querySelector(".products");
 
 window.onscroll = function () {
@@ -163,7 +156,6 @@ window.onscroll = function () {
 
 };
 
-// Create pop up with the image
 let ourGallery = document.querySelectorAll(".gallery img");
 
 ourGallery.forEach(img => {
@@ -192,7 +184,6 @@ ourGallery.forEach(img => {
 
     }
 
-    // Create the image of popup
     let pppImage = document.createElement("img");
 
     pppImage.src = img.src;
@@ -216,7 +207,7 @@ ourGallery.forEach(img => {
 
 });
 
-// Closing popup
+
 document.addEventListener("click", function (e) {
 
   if (e.target.className == 'close-button') {
@@ -236,7 +227,6 @@ const allBull = document.querySelectorAll(".nav-bullets .bullet");
 
 const allLinxx = document.querySelectorAll(".links a");
 
-// Lets create a function for links in header
 function scrToTar(elements) {
 
   elements.forEach(element => {
@@ -285,7 +275,6 @@ document.querySelector(".reset-option").onclick = function () {
 };
 
 
-// Toggle Menu
 let toggleBtn = document.querySelector(".toggle-menu");
 let tLinks = document.querySelector(".links");
 
@@ -304,7 +293,6 @@ document.addEventListener("click", (e) => {
 
   if (e.target !== toggleBtn && e.target !== tLinks) {
 
-    // Check if menu is open
     if (tLinks.classList.contains("open")) {
 
       toggleBtn.classList.toggle("menu-active");
